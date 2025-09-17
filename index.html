@@ -12,10 +12,10 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            overflow-x: hidden;
+            line-height: 1.6;
         }
 
         .container {
@@ -27,172 +27,141 @@
         /* Header Section */
         .header {
             text-align: center;
-            margin-bottom: 40px;
-            animation: fadeInDown 1s ease-out;
+            margin-bottom: 30px;
         }
 
         .header h1 {
             color: white;
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 10px;
-            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
-            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            font-weight: 600;
         }
 
         .header p {
             color: rgba(255,255,255,0.9);
-            font-size: 1.2rem;
-            margin-bottom: 30px;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
         }
 
         .datetime {
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
-            padding: 15px 25px;
-            border-radius: 50px;
+            background: rgba(255,255,255,0.15);
+            padding: 12px 20px;
+            border-radius: 25px;
             color: white;
-            font-size: 1.1rem;
+            font-size: 1rem;
             display: inline-block;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
         }
 
         /* Navigation Pills */
         .nav-pills {
             display: flex;
             justify-content: center;
-            gap: 15px;
-            margin-bottom: 30px;
-            animation: fadeInUp 1s ease-out 0.3s both;
+            gap: 10px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
         }
 
         .nav-pill {
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
+            background: rgba(255,255,255,0.15);
             border: 1px solid rgba(255,255,255,0.2);
-            padding: 12px 30px;
-            border-radius: 50px;
+            padding: 10px 25px;
+            border-radius: 25px;
             color: white;
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
             font-weight: 500;
             cursor: pointer;
+            font-size: 0.95rem;
         }
 
         .nav-pill:hover, .nav-pill.active {
-            background: rgba(255,255,255,0.2);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-1px);
         }
 
         /* App Cards */
         .app-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-            animation: fadeInUp 1s ease-out 0.6s both;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
         }
 
         .app-card {
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(20px);
+            background: rgba(255,255,255,0.15);
             border: 1px solid rgba(255,255,255,0.2);
-            border-radius: 20px;
-            padding: 30px;
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-        }
-
-        .app-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-            transition: left 0.6s;
+            border-radius: 15px;
+            padding: 25px;
+            transition: transform 0.2s ease;
+            backdrop-filter: blur(10px);
         }
 
         .app-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
-        }
-
-        .app-card:hover::before {
-            left: 100%;
+            transform: translateY(-2px);
         }
 
         .app-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #ff6b6b, #feca57);
-            border-radius: 20px;
+            width: 60px;
+            height: 60px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            box-shadow: 0 10px 20px rgba(255,107,107,0.3);
-        }
-
-        .app-card:nth-child(2) .app-icon {
-            background: linear-gradient(135deg, #48cae4, #0077b6);
-            box-shadow: 0 10px 20px rgba(72,202,228,0.3);
+            font-size: 1.8rem;
+            margin-bottom: 15px;
         }
 
         .app-title {
             color: white;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 600;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .app-description {
             color: rgba(255,255,255,0.8);
-            margin-bottom: 25px;
-            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
         }
 
         .app-btn {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: rgba(255,255,255,0.2);
             color: white;
-            padding: 12px 30px;
+            padding: 10px 20px;
             border: none;
-            border-radius: 50px;
-            font-size: 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
             font-weight: 500;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
             text-decoration: none;
             display: inline-block;
-            box-shadow: 0 8px 20px rgba(102,126,234,0.3);
+            border: 1px solid rgba(255,255,255,0.3);
         }
 
         .app-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 25px rgba(102,126,234,0.4);
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-1px);
         }
 
         /* Main Content Area */
         .main-content {
-            background: rgba(255,255,255,0.95);
-            border-radius: 20px;
+            background: white;
+            border-radius: 15px;
             min-height: 600px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
             position: relative;
             overflow: hidden;
-            animation: fadeInUp 1s ease-out 0.9s both;
         }
 
         .iframe-container {
             width: 100%;
             height: 600px;
             border: none;
-            border-radius: 20px;
+            border-radius: 15px;
         }
 
         .loading {
@@ -205,13 +174,13 @@
         }
 
         .spinner {
-            width: 50px;
-            height: 50px;
-            border: 4px solid #e0e0e0;
-            border-top: 4px solid #667eea;
+            width: 30px;
+            height: 30px;
+            border: 3px solid #e0e0e0;
+            border-top: 3px solid #667eea;
             border-radius: 50%;
             animation: spin 1s linear infinite;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .welcome-screen {
@@ -220,107 +189,70 @@
             justify-content: center;
             height: 600px;
             flex-direction: column;
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             text-align: center;
         }
 
         .welcome-icon {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            animation: bounce 2s infinite;
+            font-size: 3rem;
+            margin-bottom: 15px;
         }
 
         .welcome-title {
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 10px;
             font-weight: 600;
         }
 
         .welcome-text {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             opacity: 0.9;
         }
 
         /* Quick Stats */
         .quick-stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-bottom: 40px;
-            animation: fadeInUp 1s ease-out 1.2s both;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
         }
 
         .stat-card {
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
+            background: rgba(255,255,255,0.15);
             border: 1px solid rgba(255,255,255,0.2);
-            border-radius: 15px;
-            padding: 20px;
+            border-radius: 12px;
+            padding: 15px;
             text-align: center;
             color: white;
         }
 
         .stat-number {
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: bold;
             margin-bottom: 5px;
         }
 
         .stat-label {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             opacity: 0.8;
         }
 
-        /* Animations */
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
+        /* Minimal Animations */
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
 
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-10px);
-            }
-            60% {
-                transform: translateY(-5px);
-            }
-        }
-
         /* Responsive Design */
         @media (max-width: 768px) {
             .header h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
             
             .app-grid {
                 grid-template-columns: 1fr;
-                gap: 20px;
+                gap: 15px;
             }
             
             .nav-pills {
@@ -346,11 +278,11 @@
             }
             
             .welcome-title {
-                font-size: 2rem;
+                font-size: 1.6rem;
             }
             
             .container {
-                padding: 10px;
+                padding: 15px;
             }
         }
 
@@ -364,42 +296,26 @@
             }
             
             .datetime {
-                padding: 10px 15px;
+                padding: 8px 15px;
                 font-size: 0.9rem;
             }
-        }
 
-        /* Floating particles effect */
-        .particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        .particle {
-            position: absolute;
-            background: rgba(255,255,255,0.1);
-            border-radius: 50%;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0px) rotate(0deg);
+            .app-grid {
+                grid-template-columns: 1fr;
             }
-            50% {
-                transform: translateY(-20px) rotate(180deg);
-            }
+        }
+
+        /* Performance optimizations */
+        .app-card, .nav-pill, .app-btn {
+            will-change: transform;
+        }
+
+        .iframe-container {
+            will-change: contents;
         }
     </style>
 </head>
 <body>
-    <div class="particles" id="particles"></div>
-    
     <div class="container">
         <!-- Header Section -->
         <div class="header">
@@ -412,53 +328,51 @@
         <div class="quick-stats">
             <div class="stat-card">
                 <div class="stat-number">2</div>
-                <div class="stat-label">Aplikasi Tersedia</div>
+                <div class="stat-label">Aplikasi</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">Uptime</div>
+                <div class="stat-number">Online</div>
+                <div class="stat-label">Status</div>
             </div>
             <div class="stat-card">
                 <div class="stat-number">24/7</div>
                 <div class="stat-label">Support</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">⭐</div>
-                <div class="stat-label">Premium</div>
+                <div class="stat-number">Fast</div>
+                <div class="stat-label">Loading</div>
             </div>
         </div>
 
         <!-- Navigation Pills -->
         <div class="nav-pills">
             <div class="nav-pill active" onclick="showWelcome()">🏠 Beranda</div>
-            <div class="nav-pill" onclick="loadApp('https://doniyan.github.io/rekap-absen/', 'rekap')">📊 Rekap Absen</div>
-            <div class="nav-pill" onclick="loadApp('https://doniyan.github.io/ijin-siswa/', 'ijin')">📝 Ijin Siswa</div>
+            <div class="nav-pill" onclick="loadApp('https://doniyan.github.io/rekap-absen/')">📊 Rekap Absen</div>
+            <div class="nav-pill" onclick="loadApp('https://doniyan.github.io/ijin-siswa/')">📝 Ijin Siswa</div>
         </div>
 
-        <!-- App Cards (Hidden when iframe is shown) -->
+        <!-- App Cards -->
         <div class="app-grid" id="appGrid">
             <div class="app-card">
                 <div class="app-icon">📊</div>
                 <div class="app-title">Rekap Absensi</div>
                 <div class="app-description">
-                    Aplikasi untuk merekap dan mengelola data absensi siswa secara digital. 
-                    Fitur lengkap untuk monitoring kehadiran siswa dengan laporan yang detail.
+                    Aplikasi untuk merekap dan mengelola data absensi siswa secara digital dengan laporan lengkap.
                 </div>
-                <a href="#" class="app-btn" onclick="loadApp('https://doniyan.github.io/rekap-absen/', 'rekap')">
+                <button class="app-btn" onclick="loadApp('https://doniyan.github.io/rekap-absen/')">
                     Buka Aplikasi →
-                </a>
+                </button>
             </div>
 
             <div class="app-card">
                 <div class="app-icon">📝</div>
                 <div class="app-title">Ijin Siswa</div>
                 <div class="app-description">
-                    Sistem manajemen ijin siswa yang memudahkan proses pengajuan dan persetujuan ijin. 
-                    Dashboard terintegrasi untuk guru dan admin.
+                    Sistem manajemen ijin siswa untuk proses pengajuan dan persetujuan ijin secara digital.
                 </div>
-                <a href="#" class="app-btn" onclick="loadApp('https://doniyan.github.io/ijin-siswa/', 'ijin')">
+                <button class="app-btn" onclick="loadApp('https://doniyan.github.io/ijin-siswa/')">
                     Buka Aplikasi →
-                </a>
+                </button>
             </div>
         </div>
 
@@ -467,13 +381,13 @@
             <div class="welcome-screen">
                 <div class="welcome-icon">🎓</div>
                 <div class="welcome-title">Selamat Datang!</div>
-                <div class="welcome-text">Pilih aplikasi yang ingin Anda gunakan dari menu di atas</div>
+                <div class="welcome-text">Pilih aplikasi yang ingin Anda gunakan</div>
             </div>
         </div>
     </div>
 
     <script>
-        // Update datetime
+        // Optimized datetime update (reduced frequency)
         function updateDateTime() {
             const now = new Date();
             const options = {
@@ -482,21 +396,20 @@
                 month: 'long',
                 day: 'numeric',
                 hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit'
+                minute: '2-digit'
             };
             document.getElementById('datetime').textContent = now.toLocaleDateString('id-ID', options);
         }
 
-        // Load application in iframe
-        function loadApp(url, type) {
+        // Optimized app loading
+        function loadApp(url) {
             const mainContent = document.getElementById('mainContent');
             const appGrid = document.getElementById('appGrid');
             
-            // Hide app grid
+            // Hide app grid immediately
             appGrid.style.display = 'none';
             
-            // Show loading
+            // Show minimal loading
             mainContent.innerHTML = `
                 <div class="loading">
                     <div class="spinner"></div>
@@ -504,16 +417,16 @@
                 </div>
             `;
             
-            // Update navigation active state
+            // Update nav state
             document.querySelectorAll('.nav-pill').forEach(pill => {
                 pill.classList.remove('active');
             });
             event.target.classList.add('active');
             
-            // Load iframe
+            // Load iframe with minimal delay
             setTimeout(() => {
-                mainContent.innerHTML = `<iframe class="iframe-container" src="${url}" frameborder="0"></iframe>`;
-            }, 1000);
+                mainContent.innerHTML = `<iframe class="iframe-container" src="${url}" frameborder="0" loading="lazy"></iframe>`;
+            }, 500);
         }
 
         // Show welcome screen
@@ -521,85 +434,41 @@
             const mainContent = document.getElementById('mainContent');
             const appGrid = document.getElementById('appGrid');
             
-            // Show app grid
             appGrid.style.display = 'grid';
             
-            // Update navigation active state
             document.querySelectorAll('.nav-pill').forEach(pill => {
                 pill.classList.remove('active');
             });
             event.target.classList.add('active');
             
-            // Show welcome screen
             mainContent.innerHTML = `
                 <div class="welcome-screen">
                     <div class="welcome-icon">🎓</div>
                     <div class="welcome-title">Selamat Datang!</div>
-                    <div class="welcome-text">Pilih aplikasi yang ingin Anda gunakan dari menu di atas</div>
+                    <div class="welcome-text">Pilih aplikasi yang ingin Anda gunakan</div>
                 </div>
             `;
         }
 
-        // Create floating particles
-        function createParticles() {
-            const particlesContainer = document.getElementById('particles');
-            const particleCount = 20;
-            
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.classList.add('particle');
-                
-                // Random size
-                const size = Math.random() * 8 + 2;
-                particle.style.width = size + 'px';
-                particle.style.height = size + 'px';
-                
-                // Random position
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.top = Math.random() * 100 + '%';
-                
-                // Random animation delay
-                particle.style.animationDelay = Math.random() * 6 + 's';
-                
-                particlesContainer.appendChild(particle);
-            }
-        }
-
-        // Initialize
+        // Optimized initialization
         document.addEventListener('DOMContentLoaded', function() {
             updateDateTime();
-            setInterval(updateDateTime, 1000);
-            createParticles();
+            // Update time less frequently (every minute instead of every second)
+            setInterval(updateDateTime, 60000);
+        });
+
+        // Preload critical resources
+        document.addEventListener('DOMContentLoaded', function() {
+            // Preload the app URLs for faster loading
+            const link1 = document.createElement('link');
+            link1.rel = 'prefetch';
+            link1.href = 'https://doniyan.github.io/rekap-absen/';
+            document.head.appendChild(link1);
             
-            // Add click handlers to nav pills
-            document.querySelectorAll('.nav-pill').forEach((pill, index) => {
-                if (index === 0) return; // Skip beranda
-                
-                pill.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    // Remove active from all pills
-                    document.querySelectorAll('.nav-pill').forEach(p => p.classList.remove('active'));
-                    
-                    // Add active to clicked pill
-                    this.classList.add('active');
-                });
-            });
-        });
-
-        // Handle iframe load errors
-        window.addEventListener('message', function(event) {
-            // Handle any cross-origin communication if needed
-        });
-
-        // Add smooth scroll behavior
-        document.documentElement.style.scrollBehavior = 'smooth';
-
-        // Add keyboard navigation
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                showWelcome();
-            }
+            const link2 = document.createElement('link');
+            link2.rel = 'prefetch';
+            link2.href = 'https://doniyan.github.io/ijin-siswa/';
+            document.head.appendChild(link2);
         });
     </script>
 </body>
